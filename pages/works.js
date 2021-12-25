@@ -1,14 +1,14 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import dynamic from "next/dynamic";
-import Loading from "reusableComponents/Loading";
-import Main from "containers/MainContainer";
+import WorkComponent from "containers/WorkContainer";
 
-// const Main = dynamic(import("containers/MainContainer"));
-export default function Home({ clickedNavState }) {
-  return <Main clickedNavState={clickedNavState} />;
+// const WorkComponent = dynamic(import("containers/WorkContainer"));
+export default function Works({ clickedNavState }) {
+  return <WorkComponent clickedNavState={clickedNavState} />;
 }
 
-Home.defaultLayout = "Home";
+Works.defaultLayout = "Works";
+// Work.footer = ["work1", "work2", "work3"];
 
 export async function getStaticProps({ locale }) {
   return {
