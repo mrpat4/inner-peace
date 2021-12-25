@@ -13,20 +13,6 @@ function WorkContainer({ clickedNavState }) {
   useLayoutEffect(() => {
     workAnimations({ ...{ tl, introRef, outroRef } });
   }, []);
-  // -----------------------------------------------------------------------------------------------------------------------------------------
-  // this useEffect fires when user want to exit the page,in that time this function is fired and remove dontShowAnimation from localStorage,
-  // so that the next time user came to site he or she can see the animation from beginning.
-  useEffect(() => {
-    const unloadCallback = (event) => {
-      event.preventDefault();
-      localStorage.removeItem("dontShowAnimation");
-      event.returnValue = "";
-      return "";
-    };
-    window.addEventListener("beforeunload", unloadCallback);
-    return () => window.removeEventListener("beforeunload", unloadCallback);
-  }, []);
-
   // ------------------ return ------------------------------------------------------
   return (
     <>

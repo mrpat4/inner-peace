@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 const styles = {
   Wrapper: styled.div`
-    background-color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.blackPrimary};
     padding: 2rem 4rem;
     height: 100%;
     width: 100%;
@@ -11,6 +11,19 @@ const styles = {
     align-items: center;
     .slicker {
       width: 100%;
+
+      .slick-list {
+        height: 100%;
+        border-radius: 7px;
+
+        .slick-slide {
+          opacity: 0;
+          transition: 0.3s ease-in-out;
+        }
+        .slick-active {
+          opacity: 1;
+        }
+      }
 
       .slick-dots {
         margin-top: 5rem;
@@ -28,6 +41,7 @@ const styles = {
             margin-bottom: ${({ theme }) => theme.rems.pxToRem(100)};
             display: flex;
             align-items: center;
+            color: ${({ theme }) => theme.colors.white};
             h2 {
               font-size: ${({ theme }) => theme.rems.pxToRem(30)};
             }
@@ -36,7 +50,7 @@ const styles = {
               /* color: #fff; */
 
               &.disabled {
-                background-color: rgba(102, 197, 227, 0.5);
+                background-color: #e0d069;
                 pointer-events: none;
               }
             }
@@ -58,9 +72,9 @@ const styles = {
               align-items: center;
               ${({ theme }) => `margin-${theme.withDIR.change("left")}:2rem`};
               font-size: ${({ theme }) => theme.rems.pxToRem(12)};
-              background-color: ${({ theme }) => theme.colors.primary};
+              background-color: ${({ theme }) => theme.colors.yellow};
               padding: 0.5rem 1rem;
-              color: #fff;
+              color: ${({ theme }) => theme.colors.blackPrimary};
 
               &_wrapper {
                 display: block;
@@ -101,13 +115,14 @@ const styles = {
           }
           p {
             font-size: ${({ theme }) => theme.rems.pxToRem(15)};
+            color: ${({ theme }) => theme.colors.grayLight};
             position: relative;
             max-width: 70%;
             &:before {
               content: "";
               width: 30px;
               height: 2px;
-              background-color: ${({ theme }) => theme.colors.black};
+              background-color: ${({ theme }) => theme.colors.yellow};
               position: absolute;
               top: -10px;
               left: 0;
@@ -117,6 +132,19 @@ const styles = {
         .inner-slider-right-side {
           width: 49% !important;
           height: auto;
+
+          .slick-list {
+            height: 100%;
+            border-radius: 7px;
+
+            .slick-slide {
+              opacity: 1;
+            }
+            .slick-active {
+              opacity: 1;
+            }
+          }
+
           img {
             width: 100%;
             cursor: pointer;
@@ -156,7 +184,7 @@ const styles = {
   Modal_wrapper: styled.div`
     width: 90%;
     height: 90%;
-    background-color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.blackPrimary};
     border-radius: 7px;
     position: relative;
     z-index: 150;
@@ -183,7 +211,7 @@ const styles = {
       svg {
         width: 20px;
         height: 20px;
-        stroke: ${({ theme }) => theme.colors.white};
+        stroke: ${({ theme }) => theme.colors.blackPrimary};
       }
     }
   `,
@@ -207,14 +235,15 @@ const styles = {
   `,
   Footer: styled.footer`
     position: absolute;
-    bottom: 17px;
+    bottom: 2rem;
     left: 4rem;
-    z-index: 111;
+    z-index: 100;
     ul {
       display: flex;
       justify-content: center;
       align-items: center;
       font-size: ${({ theme }) => theme.rems.pxToRem(13)};
+      color: ${({ theme }) => theme.colors.white};
 
       li:not(:nth-child(1)) {
         /* margin-left: 1rem; */
@@ -230,7 +259,7 @@ const styles = {
           top: -5px;
           width: 2px;
           height: 0;
-          background-color: ${({ theme }) => theme.colors.primary};
+          background-color: ${({ theme }) => theme.colors.yellow};
           transition: 350ms cubic-bezier(0.215, 0.61, 0.355, 1);
         }
         .right-border {
@@ -239,7 +268,7 @@ const styles = {
           bottom: -5px;
           width: 2px;
           height: 0;
-          background-color: ${({ theme }) => theme.colors.primary};
+          background-color: ${({ theme }) => theme.colors.yellow};
           transition: 350ms cubic-bezier(0.215, 0.61, 0.355, 1);
         }
 
@@ -255,7 +284,7 @@ const styles = {
           content: "";
           width: 0;
           height: 2px;
-          background-color: ${({ theme }) => theme.colors.primary};
+          background-color: ${({ theme }) => theme.colors.yellow};
           position: absolute;
           top: -5px;
           left: 0;
@@ -265,7 +294,7 @@ const styles = {
           content: "";
           width: 0;
           height: 2px;
-          background-color: ${({ theme }) => theme.colors.primary};
+          background-color: ${({ theme }) => theme.colors.yellow};
           position: absolute;
           bottom: -5px;
           right: 0;

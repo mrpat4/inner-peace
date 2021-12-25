@@ -7,9 +7,12 @@ const IntroOverlay = ({ introRef, bgColor }) => {
     <>
       <s.Div_overlay ref={introRef} bgColor={bgColor}>
         <div className="top">
-          <div className="overlay-top" style={{ background: bgColor ? bgColor : "#ededed" }}></div>
-          <div className="overlay-top" style={{ background: bgColor ? bgColor : "#ededed" }}></div>
-          <div className="overlay-top" style={{ background: bgColor ? bgColor : "#ededed" }}></div>
+          <div className="overlay-top" style={{ background: "#fce130" }}></div>
+          <div className="overlay-top" style={{ background: "#fce130" }}></div>
+          <div className="overlay-top" style={{ background: "#fce130" }}></div>
+          {/* <div className="overlay-top" style={{ background: bgColor ? bgColor : "#fce130" }}></div>
+          <div className="overlay-top" style={{ background: bgColor ? bgColor : "#fce130" }}></div>
+          <div className="overlay-top" style={{ background: bgColor ? bgColor : "#fce130" }}></div> */}
         </div>
         {/* <div className='bottom'>
           <div className='overlay-bottom'></div>

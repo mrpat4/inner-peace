@@ -38,7 +38,7 @@ const Layout = ({ Component, pageProps, props }) => {
             <Sidebar clickedNavState={clickedNavState} />
           </div> */}
         </main>
-        {/* {Component.footer ? <FooterContainer data={Component.footer} /> : <FooterContainer />} */}
+        <FooterContainer />
       </>
     );
   } else return <Component {...pageProps} />;

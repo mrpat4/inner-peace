@@ -24,7 +24,7 @@ const styles = {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 105;
+    z-index: 90;
   `,
   Div_left: styled.div`
     padding: 2rem 4rem;
@@ -41,7 +41,7 @@ const styles = {
     justify-content: space-between;
     padding: 2rem 4rem;
     width: 35%;
-    font-size: ${({ theme }) => theme.rems.pxToRem(13)};
+    font-size: ${({ theme }) => theme.rems.pxToRem(11)};
   `,
 
   Li: styled.li`

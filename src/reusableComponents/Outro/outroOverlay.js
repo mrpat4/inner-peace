@@ -9,10 +9,10 @@ const OutroOverlay = ({ outroRef }) => {
     exit: {
       zIndex: 100,
       transition: {
-        duration: 1.6,
+        duration: 1,
         staggerChildren: 0.4,
         type: "spring",
-        stiffness: 100,
+        // stiffness: 10,
       },
     },
   };
@@ -24,9 +24,9 @@ const OutroOverlay = ({ outroRef }) => {
       height: "100%",
       zIndex: 100,
       transition: {
-        duration: 1.6,
+        duration: 1,
         type: "spring",
-        stiffness: 100,
+        stiffness: 50,
       },
     },
   };

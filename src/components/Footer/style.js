@@ -6,21 +6,36 @@ const styles = {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 8vh;
     position: absolute;
-    bottom: 0;
+    bottom: 2rem;
     left: 0;
-    z-index: 105;
+    z-index: 99;
   `,
   Div_left_side: styled.div`
     width: 50%;
     height: 100%;
-    background-color: ${({ theme }) => theme.colors.white};
   `,
   Div_right_side: styled.div`
     width: 50%;
     height: 100%;
-    background-color: ${({ theme }) => theme.colors.black};
+    /* padding-bottom: 1rem; */
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 4rem;
+    ul {
+      display: flex;
+      align-items: flex-end;
+      margin-left: auto;
+
+      li {
+        margin-left: 3rem;
+
+        svg {
+          width: 12px;
+          fill: ${({ theme }) => theme.colors.grayLight};
+        }
+      }
+    }
   `,
 };
 

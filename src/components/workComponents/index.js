@@ -15,7 +15,7 @@ function WorkComponent() {
   // -------------------------------- slider settings
 
   const mainSliderSettings = {
-    dots: true,
+    dots: false,
     infinite: false,
     speed: 500,
     slidesToShow: 1,
@@ -157,14 +157,7 @@ function WorkComponent() {
                     </div>
                     <p>{work.description}</p>
                   </motion.div>
-                  <motion.div
-                    className="inner-slider-right-side"
-                    ref={linkRef}
-                    onMouseDown={mouseDownHandler}
-                    onMouseMove={mouseMoveHandler}
-                    variants={rightSideAnimation}
-                    exit="exit"
-                  >
+                  <motion.div className="inner-slider-right-side" ref={linkRef} onMouseDown={mouseDownHandler} onMouseMove={mouseMoveHandler} variants={rightSideAnimation} exit="exit">
                     <Slider {...imagesSliderSettings}>
                       {work.images.map((image, i) => (
                         <img src={image.src} onClick={(e) => handleShowModal(work.images, i, e)} />

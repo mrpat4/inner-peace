@@ -1,6 +1,7 @@
 import { changeWithDir } from "./helperFunctions";
 
 export default function Theme(direction) {
+  let darkMode = true;
   return {
     colors: {
       // primary: "red",
@@ -16,6 +17,7 @@ export default function Theme(direction) {
       blackPrimary: "#263238",
       darkGold: "#f9ba00",
       yellow: "#fce130",
+      blue: "#5a9a93",
     },
     rems: {
       pxToRem: (px) => `${px / 16}rem`,
