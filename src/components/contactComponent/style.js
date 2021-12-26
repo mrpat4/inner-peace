@@ -73,7 +73,10 @@ const styles = {
           &:hover {
             .svg-wrapper {
               background-color: #000;
-              fill: #fff;
+              /* fill: #fff; */
+              svg {
+                fill: #fff;
+              }
             }
           }
         }
@@ -81,7 +84,10 @@ const styles = {
           &:hover {
             .svg-wrapper {
               background-color: #0a66c2;
-              fill: #fff;
+              /* fill: #fff; */
+              svg {
+                fill: #fff;
+              }
             }
           }
         }
@@ -99,7 +105,10 @@ const styles = {
           &:hover {
             .svg-wrapper {
               background-color: #44c654;
-              fill: #fff;
+              /* fill: #fff; */
+              svg {
+                fill: #fff;
+              }
             }
           }
         }
@@ -107,7 +116,10 @@ const styles = {
           &:hover {
             .svg-wrapper {
               background-color: #b431b5;
-              fill: #fff;
+              /* fill: #fff; */
+              svg {
+                fill: #fff;
+              }
             }
           }
         }
@@ -116,7 +128,7 @@ const styles = {
             .svg-wrapper {
               background-color: #e8443b;
               svg {
-                stroke: #fff !important;
+                stroke: #fff;
               }
             }
           }

@@ -39,7 +39,8 @@ const styles = {
           word-break: break-all;
           .bgAnimation {
             background: ${({ theme }) => theme.colors.backgroundYellow};
-            width: 100%;
+            /* width: 100% !important; */
+            min-width: 100%;
             padding: 2rem;
             min-height: 300px;
             border-radius: 4px;
@@ -51,6 +52,7 @@ const styles = {
             color: ${({ theme }) => theme.colors.white};
             h2 {
               font-size: ${({ theme }) => theme.rems.pxToRem(30)};
+              color: ${({ theme }) => theme.colors.white};
             }
             a {
               /* padding: 0.5rem 1rem; */

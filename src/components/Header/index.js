@@ -1,8 +1,10 @@
-import { Children, useEffect, useState } from "react";
+import { Children, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import s from "./style";
 import { useRouter } from "next/dist/client/router";
 import gsap from "gsap";
+import About from "components/About";
+import { aboutAnimationHide, aboutAnimationShow } from "utils/gsapAnimations/aboutAnimations";
 
 function Header({ pageTitle, setClickedNavState, clickedNavState }) {
   const router = useRouter();
@@ -78,6 +80,17 @@ function Header({ pageTitle, setClickedNavState, clickedNavState }) {
     }
   }, []);
   const [className, setClassName] = useState("home");
+  let tl = useRef();
+
+  const navClickHandler = (navItem) => {
+    setClickedNavState(navItem.title === "About" && !clickedNavState);
+    // clickedNavState ? aboutAnimationShow(...{ tl }) : aboutAnimationHide(...{ tl });
+    // aboutAnimationShow({ ...{ tl } });
+  };
+
+  useEffect(() => {
+    clickedNavState && aboutAnimationShow({ ...{ tl } });
+  }, [clickedNavState]);
 
   useEffect(() => {
     if (router.pathname === "/") {
@@ -97,7 +110,7 @@ function Header({ pageTitle, setClickedNavState, clickedNavState }) {
         <s.Ul_right>
           {Children.toArray(
             navMenu.map((navItem, i) => (
-              <s.Li style={{ display: `${navItem.title === pageTitle ? "none" : "flex"}` }} className="nav-link" onClick={() => setClickedNavState(navItem.title === "About" && !clickedNavState)}>
+              <s.Li style={{ display: `${navItem.title === pageTitle ? "none" : "flex"}` }} className="nav-link" onClick={() => navClickHandler(navItem)}>
                 <Link href={navItem.link}>
                   <a>{navItem.title}</a>
                 </Link>
@@ -107,7 +120,7 @@ function Header({ pageTitle, setClickedNavState, clickedNavState }) {
         </s.Ul_right>
       </s.Nav>
       <s.About_wrapper className={`${clickedNavState ? "show-about" : ""}`}>
-        <h1>this is about</h1>
+        <About clickedNavState={clickedNavState} />
       </s.About_wrapper>
     </>
   );

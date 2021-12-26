@@ -47,6 +47,7 @@ const styles = {
   Li: styled.li`
     height: 19px;
     overflow: hidden;
+    color: ${({ theme }) => theme.colors.grayLight};
   `,
   About_wrapper: styled.div`
     position: fixed;
@@ -55,7 +56,7 @@ const styles = {
     bottom: 0;
     width: 0;
     height: calc(100% - 85px);
-    background-color: ${({ theme }) => theme.colors.blackPrimary};
+    background-color: ${({ theme }) => theme.colors.backgroundYellow};
     color: ${({ theme }) => theme.colors.white};
     overflow: hidden;
     transition: all 0.4s ease-in;

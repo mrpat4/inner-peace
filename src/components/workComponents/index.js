@@ -85,7 +85,6 @@ function WorkComponent() {
   };
 
   const handleCloseModal = () => {
-    console.log("im clicked");
     setModal(false);
     setSelectedImages(undefined);
   };

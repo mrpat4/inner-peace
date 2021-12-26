@@ -15,7 +15,7 @@ const style = {
         position: absolute;
         height: 0;
         width: 33.333vw;
-        background: ${({ theme }) => theme.colors.yellow};
+        background: ${({ theme }) => theme.colors.backgroundYellow};
         bottom: 0;
         right: 0;
         left: 0;

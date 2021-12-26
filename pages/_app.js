@@ -1,18 +1,19 @@
 import { appWithTranslation } from "next-i18next";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "styles/global-styles";
-import Theme from "styles/theme";
+// import Theme from "styles/theme";
 import Layout from "utils/Layout";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/dist/client/router";
+import { darkTheme, lightTheme } from "styles/theme";
 
 function MyApp({ Component, pageProps, ...props }) {
   const router = useRouter();
-
+  const theme = lightTheme;
   return (
-    <ThemeProvider theme={Theme("ltr")}>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       <AnimatePresence exitBeforeEnter>
         <Layout Component={Component} pageProps={pageProps} props={props} key={router.route} />

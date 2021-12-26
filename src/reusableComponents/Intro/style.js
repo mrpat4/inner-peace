@@ -18,7 +18,7 @@ const style = {
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: ${({ bgColor }) => bgColor && bgColor};
+        background: ${({ theme }) => theme.colors.backgroundYellow};
 
         &:nth-child(2) {
           left: 33.333%;

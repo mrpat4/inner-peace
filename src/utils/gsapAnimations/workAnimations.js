@@ -91,8 +91,9 @@ export function workAnimations({ tl }) {
         height: "250px",
         padding: 0,
         width: 0,
+        minWidth: 0,
         ease: "expo.easeOut",
-        duration: 1,
+        duration: 0.5,
       },
       "nav+=1.8"
     )
@@ -102,7 +103,7 @@ export function workAnimations({ tl }) {
         opacity: 0,
         x: -20,
         ease: "expo.easeOut",
-        duration: 1.6,
+        duration: 1,
       },
       "nav+=2.2"
     )
@@ -112,7 +113,7 @@ export function workAnimations({ tl }) {
         opacity: 0,
         x: 20,
         ease: "expo.easeOut",
-        duration: 1.6,
+        duration: 1,
       },
       "nav+=2.2"
     )
@@ -122,7 +123,7 @@ export function workAnimations({ tl }) {
         opacity: 0,
         y: -40,
         ease: "expo.easeOut",
-        duration: 1.6,
+        duration: 0.8,
       },
       "nav+=2.8"
     )
@@ -133,7 +134,7 @@ export function workAnimations({ tl }) {
         opacity: 0,
         y: 100,
         ease: "expo.easeOut",
-        duration: 1.6,
+        duration: 0.8,
       },
       "nav+=3"
     )

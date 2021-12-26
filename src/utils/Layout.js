@@ -9,10 +9,6 @@ const FooterContainer = dynamic(import("components/Footer"));
 
 const Layout = ({ Component, pageProps, props }) => {
   const [clickedNavState, setClickedNavState] = useState(false);
-  let tl = useRef();
-  let headerRef = useRef(null);
-  let footerRef = useRef(null);
-
   // useEffect(() => {
   //   tl.current = gsap.timeline().from(".nav-link a", {
   //     y: 100,
