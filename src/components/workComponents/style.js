@@ -42,6 +42,7 @@ const styles = {
             width: 100%;
             padding: 2rem;
             min-height: 300px;
+            border-radius: 4px;
           }
           .title-wrapper {
             margin-bottom: ${({ theme }) => theme.rems.pxToRem(100)};
@@ -81,6 +82,7 @@ const styles = {
               background-color: ${({ theme }) => theme.colors.yellow};
               padding: 0.5rem 1rem;
               color: ${({ theme }) => theme.colors.blackPrimary};
+              border-radius: 4px;
 
               &_wrapper {
                 display: block;
@@ -157,6 +159,8 @@ const styles = {
               object-fit: cover;
               object-position: center top;
               transition: ${({ theme }) => theme.transition.cubic};
+              cursor: pointer;
+              border-radius: 4px;
             }
           }
 
@@ -170,12 +174,6 @@ const styles = {
             .slick-active {
               opacity: 1;
             }
-          }
-
-          img {
-            width: 100%;
-            cursor: pointer;
-            border-radius: 7px;
           }
         }
       }

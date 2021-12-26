@@ -87,28 +87,29 @@ function Header({ pageTitle, setClickedNavState, clickedNavState }) {
     }
   }, [pageTitle]);
   return (
-    <s.Nav className="nav">
-      <s.Div_left className={className}>
-        <p className="pageTitle" style={{ display: "flex" }}>
-          <span>{pageTitle}</span>
-        </p>
-      </s.Div_left>
-      <s.Ul_right>
-        {Children.toArray(
-          navMenu.map((navItem, i) => (
-            <s.Li
-              style={{ display: `${navItem.title === pageTitle ? "none" : "flex"}` }}
-              className="nav-link"
-              onClick={() => setClickedNavState(navItem.title === "About" && !clickedNavState)}
-            >
-              <Link href={navItem.link}>
-                <a>{navItem.title}</a>
-              </Link>
-            </s.Li>
-          ))
-        )}
-      </s.Ul_right>
-    </s.Nav>
+    <>
+      <s.Nav className="nav">
+        <s.Div_left className={className}>
+          <p className="pageTitle" style={{ display: "flex" }}>
+            <span>{pageTitle}</span>
+          </p>
+        </s.Div_left>
+        <s.Ul_right>
+          {Children.toArray(
+            navMenu.map((navItem, i) => (
+              <s.Li style={{ display: `${navItem.title === pageTitle ? "none" : "flex"}` }} className="nav-link" onClick={() => setClickedNavState(navItem.title === "About" && !clickedNavState)}>
+                <Link href={navItem.link}>
+                  <a>{navItem.title}</a>
+                </Link>
+              </s.Li>
+            ))
+          )}
+        </s.Ul_right>
+      </s.Nav>
+      <s.About_wrapper className={`${clickedNavState ? "show-about" : ""}`}>
+        <h1>this is about</h1>
+      </s.About_wrapper>
+    </>
   );
 }
 

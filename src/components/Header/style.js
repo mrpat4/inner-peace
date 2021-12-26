@@ -48,6 +48,23 @@ const styles = {
     height: 19px;
     overflow: hidden;
   `,
+  About_wrapper: styled.div`
+    position: fixed;
+    /* top: 0; */
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: calc(100% - 85px);
+    background-color: ${({ theme }) => theme.colors.blackPrimary};
+    color: ${({ theme }) => theme.colors.white};
+    overflow: hidden;
+    transition: all 0.4s ease-in;
+    z-index: 110;
+    &.show-about {
+      width: 100%;
+      transition: all 0.7s ease-out 0.2s;
+    }
+  `,
 };
 
 export default styles;
