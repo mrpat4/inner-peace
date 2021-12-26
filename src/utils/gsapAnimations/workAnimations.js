@@ -85,6 +85,18 @@ export function workAnimations({ tl }) {
     )
     // slider left side
     .from(
+      ".bgAnimation",
+      {
+        overflow: "hidden",
+        height: "250px",
+        padding: 0,
+        width: 0,
+        ease: "expo.easeOut",
+        duration: 1,
+      },
+      "nav+=1.8"
+    )
+    .from(
       ".title-wrapper h2",
       {
         opacity: 0,
@@ -92,7 +104,7 @@ export function workAnimations({ tl }) {
         ease: "expo.easeOut",
         duration: 1.6,
       },
-      "nav+=1.8"
+      "nav+=2.2"
     )
     .from(
       ".title-wrapper a ",
@@ -102,7 +114,7 @@ export function workAnimations({ tl }) {
         ease: "expo.easeOut",
         duration: 1.6,
       },
-      "nav+=1.8"
+      "nav+=2.2"
     )
     .from(
       ".inner-slider-left-side p",
@@ -112,7 +124,7 @@ export function workAnimations({ tl }) {
         ease: "expo.easeOut",
         duration: 1.6,
       },
-      "nav+=2.4"
+      "nav+=2.8"
     )
     // slider right side
     .from(
@@ -123,7 +135,7 @@ export function workAnimations({ tl }) {
         ease: "expo.easeOut",
         duration: 1.6,
       },
-      "nav+=2.8"
+      "nav+=3"
     )
     .to(".top", {
       zIndex: -2,

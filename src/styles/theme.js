@@ -18,12 +18,17 @@ export default function Theme(direction) {
       darkGold: "#f9ba00",
       yellow: "#fce130",
       blue: "#5a9a93",
+      backgroundYellow: "rgba(252,225,48,0.1)",
     },
     rems: {
       pxToRem: (px) => `${px / 16}rem`,
     },
     withDIR: {
       change: (direct) => changeWithDir(direct, direction),
+    },
+
+    transition: {
+      cubic: "350ms cubic-bezier(0.215, 0.61, 0.355, 1)",
     },
 
     direction: direction || "ltr",

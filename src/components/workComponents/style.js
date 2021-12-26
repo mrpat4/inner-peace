@@ -35,8 +35,14 @@ const styles = {
         align-items: center;
         padding: 0 2rem;
         .inner-slider-left-side {
-          width: 49% !important;
+          width: 100% !important;
           word-break: break-all;
+          .bgAnimation {
+            background: ${({ theme }) => theme.colors.backgroundYellow};
+            width: 100%;
+            padding: 2rem;
+            min-height: 300px;
+          }
           .title-wrapper {
             margin-bottom: ${({ theme }) => theme.rems.pxToRem(100)};
             display: flex;
@@ -117,7 +123,7 @@ const styles = {
             font-size: ${({ theme }) => theme.rems.pxToRem(15)};
             color: ${({ theme }) => theme.colors.grayLight};
             position: relative;
-            max-width: 70%;
+            max-width: 60%;
             &:before {
               content: "";
               width: 30px;
@@ -130,8 +136,29 @@ const styles = {
           }
         }
         .inner-slider-right-side {
-          width: 49% !important;
-          height: auto;
+          /* width: 100% !important; */
+          position: relative;
+          height: 400px;
+
+          &:hover {
+            img {
+              transform: scale(1.1);
+            }
+          }
+          .work-image-wrapper {
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            right: 60px;
+            overflow: hidden;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center top;
+              transition: ${({ theme }) => theme.transition.cubic};
+            }
+          }
 
           .slick-list {
             height: 100%;

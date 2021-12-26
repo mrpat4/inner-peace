@@ -144,26 +144,35 @@ function WorkComponent() {
             {Children.toArray(
               workData.map((work, i) => (
                 <div className="inner-slider-wrapper">
-                  <motion.div className="inner-slider-left-side" variants={leftSideAnimation} exit="exit">
-                    <div className="title-wrapper">
-                      <h2>{work.name}</h2>
-                      <Link href={work.link}>
-                        <a className={`${work.disabled ? "disabled" : ""} sk-btn sk-btn`}>
-                          <span className="sk-btn_wrapper">
-                            <span data-text={work.name}>Visit Website</span>
-                          </span>
-                        </a>
-                      </Link>
+                  <div className="inner-slider-left-side" variants={leftSideAnimation} exit="exit">
+                    <div className="bgAnimation">
+                      <div className="title-wrapper">
+                        <h2>{work.name}</h2>
+                        <Link href={work.link}>
+                          <a className={`${work.disabled ? "disabled" : ""} sk-btn sk-btn`}>
+                            <span className="sk-btn_wrapper">
+                              <span data-text={work.name}>Visit Website</span>
+                            </span>
+                          </a>
+                        </Link>
+                      </div>
+                      <p>{work.description}</p>
                     </div>
-                    <p>{work.description}</p>
-                  </motion.div>
+                  </div>
                   <motion.div className="inner-slider-right-side" ref={linkRef} onMouseDown={mouseDownHandler} onMouseMove={mouseMoveHandler} variants={rightSideAnimation} exit="exit">
+                    <div className="work-image-wrapper">
+                      {/* {work.images.map((image, i) => ( */}
+                      <img src={work.images[0].src} onClick={() => handleShowModal(work.images)} />
+                      {/* ))} */}
+                    </div>
+                  </motion.div>
+                  {/* <motion.div className="inner-slider-right-side" ref={linkRef} onMouseDown={mouseDownHandler} onMouseMove={mouseMoveHandler} variants={rightSideAnimation} exit="exit">
                     <Slider {...imagesSliderSettings}>
                       {work.images.map((image, i) => (
                         <img src={image.src} onClick={(e) => handleShowModal(work.images, i, e)} />
                       ))}
                     </Slider>
-                  </motion.div>
+                  </motion.div> */}
                 </div>
               ))
             )}
