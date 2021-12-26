@@ -42,7 +42,7 @@ export function workAnimations({ tl }) {
           amount: 0.3,
         },
       },
-      "nav+=.5"
+      "nav+=.7"
     )
     .to(
       ".nav-link",
@@ -51,7 +51,37 @@ export function workAnimations({ tl }) {
         duration: 1,
         delay: 1,
       },
-      "nav+=1"
+      "nav+=1.3"
+    )
+    // footer
+    .from(
+      ".footer-ul li",
+      {
+        y: 10,
+        ease: "power4.out",
+        opacity: 0,
+        duration: 1.7,
+        delay: 0.5,
+        stagger: {
+          amount: 0.4,
+        },
+      },
+      "nav+=1.5"
+    )
+    // works footer
+    .from(
+      ".ul-footer-work li",
+      {
+        y: 10,
+        ease: "power4.out",
+        opacity: 0,
+        duration: 1.7,
+        delay: 0.5,
+        stagger: {
+          amount: 0.5,
+        },
+      },
+      "nav+=1.5"
     )
     // slider left side
     .from(
@@ -62,7 +92,7 @@ export function workAnimations({ tl }) {
         ease: "expo.easeOut",
         duration: 1.6,
       },
-      "nav+=1"
+      "nav+=1.8"
     )
     .from(
       ".title-wrapper a ",
@@ -72,7 +102,7 @@ export function workAnimations({ tl }) {
         ease: "expo.easeOut",
         duration: 1.6,
       },
-      "nav+=1"
+      "nav+=1.8"
     )
     .from(
       ".inner-slider-left-side p",
@@ -82,7 +112,7 @@ export function workAnimations({ tl }) {
         ease: "expo.easeOut",
         duration: 1.6,
       },
-      "nav+=1.4"
+      "nav+=2.4"
     )
     // slider right side
     .from(
@@ -93,7 +123,7 @@ export function workAnimations({ tl }) {
         ease: "expo.easeOut",
         duration: 1.6,
       },
-      "nav+=1.8"
+      "nav+=2.8"
     )
     .to(".top", {
       zIndex: -2,

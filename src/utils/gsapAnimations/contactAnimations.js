@@ -42,7 +42,7 @@ export function ContactAnimations({ tl }) {
           amount: 0.3,
         },
       },
-      "nav+=.5"
+      "nav+=.7"
     )
     .to(
       ".nav-link",
@@ -51,7 +51,22 @@ export function ContactAnimations({ tl }) {
         duration: 1,
         delay: 1,
       },
-      "nav+=1"
+      "nav+=1.3"
+    )
+    // footer
+    .from(
+      ".footer-ul li",
+      {
+        y: 10,
+        ease: "power4.out",
+        opacity: 0,
+        duration: 1.7,
+        delay: 0.5,
+        stagger: {
+          amount: 0.4,
+        },
+      },
+      "nav+=1.5"
     )
     // -----------------------------------------------slider left side
     .from(

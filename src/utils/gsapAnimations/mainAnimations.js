@@ -42,7 +42,7 @@ export function mainAnimations({ tl, introRef, h1Ref, leftLineRef, rightLineRef,
           amount: 0.3,
         },
       },
-      "nav+=.5"
+      "nav+=.7"
     )
     .to(
       ".nav-link",
@@ -51,7 +51,22 @@ export function mainAnimations({ tl, introRef, h1Ref, leftLineRef, rightLineRef,
         duration: 1,
         delay: 1,
       },
-      "nav+=1"
+      "nav+=1.3"
+    )
+    // footer
+    .from(
+      ".footer-ul li",
+      {
+        y: 10,
+        ease: "power4.out",
+        opacity: 0,
+        duration: 1.7,
+        delay: 0.5,
+        stagger: {
+          amount: 0.4,
+        },
+      },
+      "nav+=1.5"
     )
     // main content h1
     .from(
@@ -63,7 +78,7 @@ export function mainAnimations({ tl, introRef, h1Ref, leftLineRef, rightLineRef,
         ease: "power4.out",
         skewY: 7,
       },
-      "nav+=1.5"
+      "nav+=2"
     )
     // main content left and right line
     .from(leftLineRef.current, { width: 0, duration: 0.8, ease: "power4.out" }, "nav+=2.5")

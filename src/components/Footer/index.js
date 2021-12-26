@@ -12,7 +12,7 @@ function Footer() {
     <s.Footer>
       <s.Div_left_side></s.Div_left_side>
       <s.Div_right_side className="footer-right">
-        <ul>
+        <ul className="footer-ul">
           {Children.toArray(
             data.map((param) => (
               <li>

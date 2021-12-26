@@ -194,7 +194,7 @@ function WorkComponent() {
         </s.Modal_wrapper>
       </s.Modal>
       <s.Footer>
-        <ul>
+        <ul className="ul-footer-work">
           {workData.map((work, i) => (
             <li className={`${i === currentSlide ? "active" : ""}`} onClick={() => mainSliderRef.current.slickGoTo(i)}>
               <span className="left-border"></span>
