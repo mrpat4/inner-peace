@@ -97,7 +97,7 @@ function Header({ pageTitle, setClickedNavState, clickedNavState }) {
         });
       }
     }
-  }, []);
+  }, [router.pathname]);
   const [className, setClassName] = useState("home");
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   let tl = useRef();
@@ -150,6 +150,7 @@ function Header({ pageTitle, setClickedNavState, clickedNavState }) {
           {Children.toArray(
             navMenu.map((navItem, i) => (
               <s.Li
+                key={navItem.title + i}
                 style={{ display: `${navItem.title === pageTitle ? "none" : "flex"}` }}
                 className="nav-link"
                 onClick={!navItem.onClick ? () => navClickHandler(navItem) : darkMode.toggle}
@@ -178,6 +179,7 @@ function Header({ pageTitle, setClickedNavState, clickedNavState }) {
         {Children.toArray(
           navMenu.map((navItem, i) => (
             <li
+              key={`${navItem}head`}
               style={{ display: `${navItem.title === pageTitle ? "none" : "flex"}` }}
               onClick={!navItem.onClick ? () => navClickHandler(navItem) : darkMode.toggle}
             >

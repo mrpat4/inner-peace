@@ -22,8 +22,8 @@ function Footer() {
         <ul className={`${router.pathname === "/works" ? "hide-it" : ""} footer-ul`}>
           {Children.toArray(
             data.map((param) => (
-              <li>
-                <a href={param.link} title={param.title} target="_blank">
+              <li key={param.title}>
+                <a href={param.link} title={param.title} target="_blank" rel="noreferrer">
                   {param.icon}
                 </a>
               </li>

@@ -3,7 +3,7 @@ import { Email, Github, Instagram, LinkedIn, Phone, Whatsapp } from "utils/svg";
 export const socialData = [
   {
     icon: <Github />,
-    title: "github",
+    title: "Github",
     desc: "see my repositories",
     link: "https://github.com/mrpat4",
   },
@@ -18,7 +18,7 @@ export const socialData = [
     icon: <Whatsapp />,
     title: "whatsapp",
     desc: "let's chat !",
-    link: " https://wa.me/989033650996",
+    link: "https://wa.me/989033650996",
   },
   {
     icon: <Instagram />,

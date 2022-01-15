@@ -11,7 +11,6 @@ import { darkTheme, lightTheme } from "styles/theme";
 import { Provider, useSelector } from "react-redux";
 import configureAppStore from "store/configureStore";
 import useDarkMode from "use-dark-mode";
-import Meta from "reusableComponents/Meta";
 
 function MyApp({ Component, pageProps, ...props }) {
   const router = useRouter();

@@ -194,6 +194,7 @@ function WorkComponent() {
             {Children.toArray(
               workData.map((work, i) => (
                 <div
+                  key={work.name + i}
                   className="inner-slider-wrapper"
                   // onClick={() => menuSliderRef.current.slickGoTo(i)}
                 >
@@ -205,6 +206,7 @@ function WorkComponent() {
                           <a
                             className={`${work.disabled ? "disabled" : ""} sk-btn sk-btn`}
                             target="_blank"
+                            rel="noreferrer"
                           >
                             <span className="sk-btn_wrapper">
                               <span data-text={work.name}>Visit Website</span>
@@ -215,7 +217,7 @@ function WorkComponent() {
                       <p>{work.description}</p>
                       {work.main && (
                         <p style={{ marginTop: "2rem" }}>
-                          <a href={work.main} target="_blank">
+                          <a href={work.main} target="_blank" rel="noreferrer">
                             Main Website
                           </a>
                         </p>
@@ -257,15 +259,15 @@ function WorkComponent() {
             <div className="close-btn">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
+                className="h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M6 18L18 6M6 6l12 12"
                 />
               </svg>
@@ -274,8 +276,8 @@ function WorkComponent() {
           <s.Modal_content>
             {selectedImages ? (
               <Slider {...modalSliderSetting} ref={sliderRef}>
-                {selectedImages?.map((image) => (
-                  <img src={image.src} />
+                {selectedImages?.map((image, i) => (
+                  <img src={image.src} key={`${i}image`} />
                 ))}
               </Slider>
             ) : (
@@ -289,6 +291,7 @@ function WorkComponent() {
           <Slider {...menuSliderSettings} ref={menuSliderRef}>
             {workData.map((work, i) => (
               <li
+                key={`${work.name + i}work`}
                 className={`${i === currentSlide ? "active" : ""}`}
                 onClick={() => mainSliderRef.current.slickGoTo(i)}
               >
