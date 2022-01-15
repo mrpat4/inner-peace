@@ -18,7 +18,11 @@ function About({ clickedNavState, setClickedNavState }) {
       <s.Left_side>
         <s.Title_wrapper>
           <h1 className="title">About Me</h1>
-          <a href="#" className={"sk-btn sk-btn gsapAnimate"}>
+          <a
+            href="/image/Portfolio.pdf"
+            download={"resume"}
+            className={"sk-btn sk-btn gsapAnimate"}
+          >
             <span className="sk-btn_wrapper">
               <span data-text="Download">My Resume</span>
             </span>
