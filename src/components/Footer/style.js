@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { devices } from "styles/queries";
 
 const styles = {
   Footer: styled.footer`
@@ -22,10 +23,19 @@ const styles = {
     display: flex;
     justify-content: flex-end;
     padding-right: 4rem;
+    @media ${devices.tablet} {
+      padding-right: 2rem;
+    }
     ul {
       display: flex;
       align-items: flex-end;
       margin-left: auto;
+
+      @media ${devices.mobileL} {
+        &.hide-it {
+          display: none;
+        }
+      }
 
       li {
         margin-left: 3rem;

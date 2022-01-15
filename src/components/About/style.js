@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { devices } from "styles/queries";
 
 const styles = {
   Div_about: styled.div`
@@ -7,16 +8,66 @@ const styles = {
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    position: relative;
     &.hide-content {
       opacity: 0;
+    }
+    @media ${devices.tablet} {
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 2rem;
+      overflow: auto;
+    }
+  `,
+  Back_icon: styled.div`
+    position: absolute;
+    left: 2rem;
+    top: 1rem;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: ${({ theme }) => theme.colors.white};
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      svg {
+        transform: translateX(5px);
+      }
+    }
+    svg {
+      fill: ${({ theme }) => theme.colors.backgroundYellow};
+      transition: ${({ theme }) => theme.transition.cubic};
     }
   `,
   Left_side: styled.div`
     width: 70%;
     transition: 0.1s ease-in-out;
 
+    h3 {
+      margin-top: 1.5rem;
+      position: relative;
+      &:before {
+        content: "";
+        width: 7px;
+        height: 3px;
+        background-color: ${({ theme }) => theme.colors.yellow};
+        position: absolute;
+        left: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
     p {
       text-align: justify;
+    }
+    @media ${devices.tablet} {
+      width: 95%;
+      order: 2;
+      margin-top: 1rem;
     }
   `,
 
@@ -26,6 +77,14 @@ const styles = {
     align-items: center;
     width: 100%;
     margin-bottom: 5rem;
+    @media ${devices.tablet} {
+      margin-bottom: 3rem;
+    }
+
+    @media ${devices.mobileM} {
+      flex-direction: column;
+      align-items: flex-start;
+    }
 
     h1 {
       font-size: ${({ theme }) => theme.rems.pxToRem(30)};
@@ -46,12 +105,18 @@ const styles = {
       display: flex;
       justify-content: center;
       align-items: center;
-      ${({ theme }) => `margin-${theme.withDIR.change("left")}:2rem`};
+      /* ${({ theme }) => `margin-${theme.withDIR.change("left")}:2rem`}; */
+      margin-left: 2rem;
       font-size: ${({ theme }) => theme.rems.pxToRem(12)};
       background-color: ${({ theme }) => theme.colors.yellow};
       padding: 0.5rem 1rem;
       color: ${({ theme }) => theme.colors.blackPrimary};
       border-radius: 4px;
+
+      @media ${devices.mobileM} {
+        margin-left: 0;
+        margin-top: 0.5rem;
+      }
 
       &_wrapper {
         display: block;
@@ -97,10 +162,15 @@ const styles = {
     align-items: center;
 
     img {
-      width: 60%;
-      height: 60%;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       margin-bottom: 2rem;
+
+      @media ${devices.tablet} {
+        width: 170px;
+        height: 170px;
+      }
     }
   `,
 };

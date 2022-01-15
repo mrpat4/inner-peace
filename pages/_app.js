@@ -8,17 +8,32 @@ import "slick-carousel/slick/slick-theme.css";
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/dist/client/router";
 import { darkTheme, lightTheme } from "styles/theme";
+import { Provider, useSelector } from "react-redux";
+import configureAppStore from "store/configureStore";
+import useDarkMode from "use-dark-mode";
+import Meta from "reusableComponents/Meta";
 
 function MyApp({ Component, pageProps, ...props }) {
   const router = useRouter();
-  const theme = lightTheme;
+  // ----------------------------------- Theme
+  const darkMode = useDarkMode(false);
+  const theme = darkMode.value ? darkTheme : lightTheme;
+
+  console.log({ darkMode });
+
+  const initialState = {};
+  const store = configureAppStore(initialState);
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <AnimatePresence exitBeforeEnter>
-        <Layout Component={Component} pageProps={pageProps} props={props} key={router.route} />
-      </AnimatePresence>
-    </ThemeProvider>
+    <>
+      <Provider store={store}>
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
+          <AnimatePresence exitBeforeEnter>
+            <Layout Component={Component} pageProps={pageProps} props={props} key={router.route} />
+          </AnimatePresence>
+        </ThemeProvider>
+      </Provider>
+    </>
   );
 }
 

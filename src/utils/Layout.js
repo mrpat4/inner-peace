@@ -1,4 +1,4 @@
-import Meta from "./Meta";
+import Meta from "reusableComponents/Meta";
 import dynamic from "next/dynamic";
 import Sidebar from "components/Sidebar";
 import { useEffect, useRef, useState } from "react";
@@ -21,11 +21,15 @@ const Layout = ({ Component, pageProps, props }) => {
   //     },
   //   });
   // }, []);
-  if (Component.defaultLayout) {
+  if (Component?.defaultLayout) {
     return (
       <>
         <Meta />
-        <HeaderContainer pageTitle={Component.defaultLayout} setClickedNavState={setClickedNavState} clickedNavState={clickedNavState} />
+        <HeaderContainer
+          pageTitle={Component.defaultLayout}
+          setClickedNavState={setClickedNavState}
+          clickedNavState={clickedNavState}
+        />
         <main>
           <div className="main-left">
             <Component {...pageProps} {...props} clickedNavState={clickedNavState} />

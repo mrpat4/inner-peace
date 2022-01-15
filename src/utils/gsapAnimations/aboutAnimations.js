@@ -3,6 +3,18 @@ import gsap from "gsap";
 export function aboutAnimationShow({ tl }) {
   tl.current = gsap
     .timeline()
+    .fromTo(
+      ".back-ico",
+      {
+        x: -10,
+        ease: "power4.out",
+        opacity: 0,
+        // duration: 1.7,
+        // delay: 0.5,
+      },
+      { x: 0, ease: "power4.out", opacity: 1, duration: 1.7, delay: 1 },
+      "start"
+    )
     // section title
     .fromTo(
       ".title",
@@ -14,7 +26,7 @@ export function aboutAnimationShow({ tl }) {
         // delay: 0.5,
       },
       { y: 0, ease: "power4.out", opacity: 1, duration: 1.7, delay: 1 },
-      "start"
+      "start+=.5"
     )
     // btn
     .fromTo(
@@ -55,7 +67,7 @@ export function aboutAnimationShow({ tl }) {
       },
       { x: 0, ease: "power4.out", opacity: 1, duration: 1.7 },
 
-      "start+=2"
+      "start+=1.7"
     );
 }
 

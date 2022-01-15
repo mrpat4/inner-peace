@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import styled, { keyframes } from "styled-components";
+import { devices } from "styles/queries";
 
 const breatheAnimation = keyframes`
  0% { background-color:#55a6bf}
@@ -22,36 +23,8 @@ const styles = {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  `,
-  Div_left_side: styled.div`
-    width: 80%;
-    h1 {
-      font-size: ${({ theme }) => theme.rems.pxToRem(60)};
-      margin-bottom: ${({ theme }) => theme.rems.pxToRem(100)};
-    }
-    p {
-      font-size: ${({ theme }) => theme.rems.pxToRem(20)};
-      position: relative;
-      max-width: 70%;
-      &:before {
-        content: "";
-        width: 30px;
-        height: 3px;
-        background-color: ${({ theme }) => theme.colors.black};
-        position: absolute;
-        top: -10px;
-        left: 0;
-      }
-    }
-  `,
-  Div_right_side: styled.div`
-    width: 20%;
-    margin-right: auto;
-    img {
-      width: 100%;
-      margin-right: auto;
-      display: block;
-      border-radius: 50%;
+    @media ${devices.tablet} {
+      padding: 2rem;
     }
   `,
 
@@ -85,6 +58,17 @@ const styles = {
         bottom: -20px;
         right: 0;
         /* transform: translateX(-33%); */
+      }
+    }
+    @media ${devices.tablet} {
+      height: 160px;
+      h1 {
+        font-size: ${({ theme }) => theme.rems.pxToRem(60)};
+        .left,
+        .right {
+          height: 3px;
+          width: 50px;
+        }
       }
     }
   `,

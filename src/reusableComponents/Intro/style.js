@@ -1,3 +1,5 @@
+import { devices } from "styles/queries";
+
 const { default: styled } = require("styled-components");
 
 // intro overlay
@@ -18,13 +20,22 @@ const style = {
         bottom: 0;
         left: 0;
         right: 0;
-        background: ${({ theme }) => theme.colors.backgroundYellow};
+        background: ${({ theme }) => theme.colors.yellow};
 
         &:nth-child(2) {
           left: 33.333%;
         }
         &:nth-child(3) {
           left: 66.666%;
+        }
+        @media ${devices.mobileL} {
+          width: 100vw;
+          &:nth-child(2) {
+            display: none;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
         }
       }
     }

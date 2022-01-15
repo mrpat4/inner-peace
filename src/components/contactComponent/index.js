@@ -42,7 +42,7 @@ function ContactComponent() {
           {Children.toArray(
             socialData.map((item) => (
               <li>
-                <a href={item.link}>
+                <a href={item.link} target="_blank">
                   <div className="svg-wrapper">{item.icon}</div>
                   <div className="text-wrapper">
                     <p className="contact-item-title">{item.title}</p>
