@@ -15,7 +15,35 @@ import wingleDashboard from "images/wingle-dashboard.png";
 import wingleUserDashboard from "images/wingle-user-dashboard.png";
 import wingleUserList from "images/wingle-user-list.png";
 import wingleUser from "images/wingle-user.png";
+import wild1 from "images/wild1.png";
+import wild2 from "images/wild2.png";
+import wild3 from "images/wild3.png";
+import wild4 from "images/wild4.png";
+import wild5 from "images/wild5.png";
+import wild6 from "images/widl6.png";
+import latest1 from "images/latest1.png";
+import latest2 from "images/latest2.png";
+import latest3 from "images/latest3.png";
+import latest4 from "images/latest4.png";
+import latest5 from "images/latest5.png";
 export const workData = [
+  {
+    name: "haze website",
+    description:
+      "Haze is a clone of an awwwards.com winner website that was wrote in laravel and jquery,i cloned it and wrote it in nextjs with all the transitions and all the animations and functionality,of course the data are fake but you get the idea ! ",
+    disabled: false,
+    images: [wild1, wild2, wild3, wild4, wild5, wild6],
+    link: "https://wild-kappa.vercel.app/",
+    main: "https://wild.as/",
+  },
+  {
+    name: "latestSpace",
+    description:
+      "LatestSpace is my recent website that also using next js,its a nft shop,that have a panel admin and admin can add the arts,mint them as nft and then i show them on the website,its still under development,but you can check it out ...",
+    disabled: false,
+    images: [latest1, latest2, latest3, latest4, latest5],
+    link: "https://latestspace.io/",
+  },
   {
     name: "evronex bot",
     description:

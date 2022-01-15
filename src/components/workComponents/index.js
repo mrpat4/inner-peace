@@ -213,6 +213,13 @@ function WorkComponent() {
                         </Link>
                       </div>
                       <p>{work.description}</p>
+                      {work.main && (
+                        <p style={{ marginTop: "2rem" }}>
+                          <a href={work.main} target="_blank">
+                            Main Website
+                          </a>
+                        </p>
+                      )}
                     </div>
                   </div>
                   <motion.div

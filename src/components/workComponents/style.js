@@ -210,7 +210,7 @@ const styles = {
               width: 100%;
               height: 100%;
               object-fit: cover;
-              object-position: center top;
+              object-position: left top;
               transition: ${({ theme }) => theme.transition.cubic};
               cursor: pointer;
               border-radius: 4px;
