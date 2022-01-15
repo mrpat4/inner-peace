@@ -11,6 +11,7 @@ import { darkTheme, lightTheme } from "styles/theme";
 import { Provider, useSelector } from "react-redux";
 import configureAppStore from "store/configureStore";
 import useDarkMode from "use-dark-mode";
+import Script from "next/script";
 
 function MyApp({ Component, pageProps, ...props }) {
   const router = useRouter();
@@ -24,6 +25,7 @@ function MyApp({ Component, pageProps, ...props }) {
   const store = configureAppStore(initialState);
   return (
     <>
+      <Script src="noflash.js"></Script>
       <Provider store={store}>
         <ThemeProvider theme={theme}>
           <GlobalStyle />
