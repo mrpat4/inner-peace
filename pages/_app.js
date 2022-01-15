@@ -16,7 +16,7 @@ import Script from "next/script";
 function MyApp({ Component, pageProps, ...props }) {
   const router = useRouter();
   // ----------------------------------- Theme
-  const darkMode = useDarkMode(false);
+  const darkMode = useDarkMode();
   const theme = darkMode.value ? darkTheme : lightTheme;
 
   console.log({ darkMode });
