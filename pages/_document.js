@@ -1,5 +1,6 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
+import Script from "next/script";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -39,7 +40,7 @@ export default class MyDocument extends Document {
           />
         </Head>
         <body>
-          <script src="noflash.js" />
+          <Script src="noflash.js"></Script>
           <Main />
           <NextScript />
         </body>
