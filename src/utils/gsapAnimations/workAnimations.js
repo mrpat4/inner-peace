@@ -70,7 +70,7 @@ export function workAnimations({ tl }) {
     )
     // works footer
     .from(
-      ".ul-footer-work li",
+      ".ul-footer-work",
       {
         y: 10,
         ease: "power4.out",
