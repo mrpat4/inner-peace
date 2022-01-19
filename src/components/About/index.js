@@ -38,7 +38,7 @@ function About({ clickedNavState, setClickedNavState }) {
             year,i learn so many things for instance:
           </p>
           <h3>Tools i use :</h3>
-          <p>Redux, Saga, TypeScript, axios, gql, react-query, hook-form, socket io, yup and ...</p>
+          <p>Redux, Saga, TypeScript, axios, react-query, hook-form, socket io, yup and ...</p>
           <h3>My Favorite Ones Are:</h3>
           <p>styled components, gsap and framer motion</p>
           <h3>Learning :</h3>
