@@ -165,6 +165,8 @@ const styles = {
       width: 200px;
       height: 200px;
       border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid ${({ theme }) => theme.colors.blackPrimary};
       margin-bottom: 2rem;
 
       @media ${devices.tablet} {

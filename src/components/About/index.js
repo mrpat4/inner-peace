@@ -30,19 +30,18 @@ function About({ clickedNavState, setClickedNavState }) {
         </s.Title_wrapper>
         <div className="desc-wrapper description">
           <p className="">
-            Hi there,im parham payam,a FRONT END DEVELOPER ! its been 4 years since i start
-            coding,first i start my journey with html,css and javaScript,along the way,i learn
-            reactjs and nextjs,first i was working as a freelancer for about 2 years,after that i
-            felt that i need to be in a compony to learn team work and gain some more experience,so
-            i joined improver digital compony (a compony based in turkey) ,i worked there for a
-            year,i learn so many things for instance:
+            Hi, Im Parham Payam,a FRONT END DEVELOPER ! it's been 4 years since i started coding,
+            first I started my journey with HTML, CSS and javaScript, then I studied react.js and
+            next.js, I was working as a freelancer for about 2 years, and after that I felt I needed
+            to be in a company to learn team work and gain some more experience,so I joined improver
+            digital company and then nexprover, i learned so many things for instance:
           </p>
           <h3>Tools i use :</h3>
           <p>Redux, Saga, TypeScript, axios, react-query, hook-form, socket io, yup and ...</p>
           <h3>My Favorite Ones Are:</h3>
           <p>styled components, gsap and framer motion</p>
-          <h3>Learning :</h3>
-          <p>Currently im learning Three.js</p>
+          {/* <h3>Learning :</h3>
+          <p>Currently im learning Three.js</p> */}
         </div>
       </s.Left_side>
       <s.Right_side>
