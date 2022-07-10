@@ -30,7 +30,7 @@ function About({ clickedNavState, setClickedNavState }) {
         </s.Title_wrapper>
         <div className="desc-wrapper description">
           <p className="">
-            Hi, Im Parham Payam,a FRONT END DEVELOPER ! it's been 4 years since i started coding,
+            Hi, Im Parham Payam,a FRONT END DEVELOPER ! its been 4 years since i started coding,
             first I started my journey with HTML, CSS and javaScript, then I studied react.js and
             next.js, I was working as a freelancer for about 2 years, and after that I felt I needed
             to be in a company to learn team work and gain some more experience,so I joined improver
