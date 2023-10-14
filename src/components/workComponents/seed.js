@@ -26,28 +26,53 @@ import latest2 from "images/latest2.png";
 import latest3 from "images/latest3.png";
 import latest4 from "images/latest4.png";
 import latest5 from "images/latest5.png";
+import mind01 from "images/mind01.png";
+import mind02 from "images/mind02.png";
+import mind03 from "images/mind03.png";
+import mind04 from "images/mind04.png";
+import mind05 from "images/mind05.png";
+import trader01 from "images/trader01.png";
+import trader02 from "images/trader02.png";
+import trader03 from "images/trader03.png";
+import trader04 from "images/trader04.png";
+import trader05 from "images/trader05.png";
 export const workData = [
   {
     name: "haze website",
     description:
-      "Haze is a clone of an awwwards.com winner website that was wrote in laravel and jquery,i cloned it and wrote it in nextjs with all the transitions and all the animations and functionality,of course the data are fake but you get the idea ! ",
+      "Haze is a reimagined version of a website that previously won an award on awwwards.com. Originally built using Laravel and jQuery, I have recreated it using Next.js, maintaining all the original transitions, animations, and functionalities. Although the data used is not real, it serves to illustrate the concept effectively.",
     disabled: false,
     images: [wild1, wild2, wild3, wild4, wild5, wild6],
     link: "https://wild-kappa.vercel.app/",
     main: "https://wild.as/",
   },
   {
+    name: "MindMint",
+    description:
+      "MindMint, a platform developed in React.js, offers a unique ‘play-to-earn’ model where users can earn USDT by focusing within the app. It utilizes the Web3 connect method for interfacing with Web3 wallets, enabling the import, withdrawal, and deposit of NFTs seamlessly on the website.While it’s still under development, you’re welcome to check out its progress.",
+    disabled: false,
+    images: [mind01, mind02, mind03, mind04, mind05],
+    link: "https://mindmint.life/",
+  },
+  {
+    name: "TraderGpt",
+    description:
+      "TraderGpt is a platform developed in React.js, designed for stacking NFTs. Users can purchase a plan, and based on the chosen plan, the platform calculates their monthly income derived from holding their NFTs.",
+    disabled: false,
+    images: [trader01, trader02, trader03, trader04, trader05],
+    link: "https://tradergpt.ai/",
+  },
+  {
     name: "latestSpace",
     description:
-      "LatestSpace is my recent website that also using next js,its a nft shop,that have a panel admin and admin can add the arts,mint them as nft and then i show them on the website,its still under development,but you can check it out ...",
+      "LatestSpace, developed using Next.js, is an NFT marketplace featuring an admin dashboard. The admin has the ability to add artwork, mint them as NFTs, and display them on the website.",
     disabled: false,
     images: [latest1, latest2, latest3, latest4, latest5],
     link: "https://latestspace.io/",
   },
   {
     name: "evronex bot",
-    description:
-      "Evronex Bot is a trading robot,i done the front coding using html css bootstrap and javaScript,its live and you can go to its website and start using it, the functionality is written in python,that one of my college done it . . .",
+    description: "Evronex Bot is a trading robot for which I’ve developed the front-end using HTML, CSS, Bootstrap, and JavaScript. ",
     disabled: false,
     images: [evronexDashboard, evronexProfile, evronexClose, evronexTrading],
     link: "http://178.128.200.244:5001/",
@@ -55,7 +80,7 @@ export const workData = [
   {
     name: "arash payam",
     description:
-      "This is a website for a photographer,he is my brother actually,i wrote this one about 3 years ago,wrote it using html,css,js and heavily gsap animation library",
+      "This website was created for a photographer, who happens to be my brother. I developed it about three years ago using HTML, CSS, and JavaScript, with a heavy emphasis on the GSAP animation library.",
     images: [arash1, arash2, arash3, arash4],
     disabled: false,
     link: "https://arash-payam.ir/",
@@ -63,7 +88,7 @@ export const workData = [
   {
     name: "wingle panel",
     description:
-      "This is a panel for wingle application(a social media app),we use react,redux,saga,yup for validations,axios for fetching data,a custom table component,react-hook-form for forms,this panel is so big and detailed,i wish you could use it but its for a customer and i can't link it here,sorry !",
+      "This is a comprehensive Admin dashboard for the Wingle application, a social media app. We’ve utilized React, Redux, Saga, and Yup for validations, along with Axios for data fetching. The panel includes a custom table component and uses react-hook-form for form handling. Due to its extensive and detailed nature, I wish you could experience it firsthand. However, as it’s developed for a client, I’m unable to provide a link here. My apologies for the inconvenience.",
     disabled: true,
     images: [wingleLogin, wingleDashboard, wingleUserDashboard, wingleUser, wingleUserList],
     link: "#",
@@ -71,7 +96,7 @@ export const workData = [
   {
     name: "alba education",
     description:
-      "alba education is a panel for an educational app,they use it for adding data to its application,i use react,redux,saga,axios,yup,react-hook-form for this panel,its functional and the owner use it daily,sorry,it's a panel and i can't give you the link,but you can check the photos .",
+      "Alba Education is an admin dashboard designed for an educational app, which is used to input data into the application. The panel was developed using React, Redux, Saga, Axios, Yup, and react-hook-form. It’s fully functional and is used daily by the owner. Unfortunately, as it’s a private dashboard, I’m unable to provide a link. However, you can view the attached photos for a glimpse into its design and functionality.",
     disabled: true,
     images: [albaDashboard, albaCategory, albaAddCategory, albaAddUser],
     link: "#",
