@@ -1,5 +1,5 @@
 import s from "./style";
-import me from "images/me.jpg";
+import me from "images/me.png";
 
 function About({ clickedNavState, setClickedNavState }) {
   return (

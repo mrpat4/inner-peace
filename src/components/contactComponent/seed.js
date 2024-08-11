@@ -1,4 +1,4 @@
-import { Email, Github, Instagram, LinkedIn, Phone, Whatsapp } from "utils/svg";
+import { Email, Github, Instagram, LinkedIn, Phone, Telegram, Whatsapp } from "utils/svg";
 
 export const socialData = [
   {
@@ -14,17 +14,23 @@ export const socialData = [
     link: "https://www.linkedin.com/in/parham-payam-515a181ab/",
   },
   // { icon: <Phone />, title: "phone", desc: "talk to me", link: "#" },
+  // {
+  //   icon: <Whatsapp />,
+  //   title: "whatsapp",
+  //   desc: "let's chat !",
+  //   link: "https://wa.me/989033650996",
+  // },
   {
-    icon: <Whatsapp />,
-    title: "whatsapp",
+    icon: <Telegram />,
+    title: "telegram",
     desc: "let's chat !",
-    link: "https://wa.me/989033650996",
+    link: "https://t.me/Prhmpym",
   },
-  {
-    icon: <Instagram />,
-    title: "instagram",
-    desc: "let's socialize !",
-    link: "https://www.instagram.com/parham.pym/",
-  },
+  // {
+  //   icon: <Instagram />,
+  //   title: "instagram",
+  //   desc: "let's socialize !",
+  //   link: "https://www.instagram.com/parham.pym/",
+  // },
   { icon: <Email />, title: "email", desc: "let's be serious !", link: "mailto:mr.pat4@gmail.com" },
 ];

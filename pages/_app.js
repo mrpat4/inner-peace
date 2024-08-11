@@ -1,28 +1,39 @@
 import { appWithTranslation } from "next-i18next";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "styles/global-styles";
-// import Theme from "styles/theme";
 import Layout from "utils/Layout";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/dist/client/router";
 import { darkTheme, lightTheme } from "styles/theme";
-import { Provider, useSelector } from "react-redux";
+import { Provider } from "react-redux";
 import configureAppStore from "store/configureStore";
 import useDarkMode from "use-dark-mode";
 import Script from "next/script";
+import { useEffect } from "react";
 
 function MyApp({ Component, pageProps, ...props }) {
   const router = useRouter();
-  // ----------------------------------- Theme
-  const darkMode = useDarkMode();
-  const theme = darkMode.value ? darkTheme : lightTheme;
+  const darkMode = useDarkMode(false);
 
-  console.log({ darkMode });
+  // Persist dark mode state using local storage
+  useEffect(() => {
+    const savedMode = localStorage.getItem("darkMode");
+    if (savedMode) {
+      savedMode === "true" ? darkMode.enable() : darkMode.disable();
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("darkMode", darkMode.value);
+  }, [darkMode.value]);
+
+  const theme = darkMode.value ? darkTheme : lightTheme;
 
   const initialState = {};
   const store = configureAppStore(initialState);
+
   return (
     <>
       <Script src="noflash.js"></Script>

@@ -35,36 +35,6 @@ function Header({ pageTitle, setClickedNavState, clickedNavState }) {
   ];
 
   useEffect(() => {
-    // document.querySelector(".pageTitle").addEventListener("mouseleave", function (e) {
-    //   // gsap.to(this, { height: 150, width: 150, duration: 0.3 });
-    //   gsap.to(".pageTitle span", { scale: 1, x: 0, y: 0, duration: 0.3 });
-    // });
-
-    // document.querySelector(".pageTitle").addEventListener("mouseenter", function (e) {
-    //   // gsap.to(this, { height: 200, width: 200, duration: 0.3 });
-    //   gsap.to(".pageTitle span", { scale: 1.3, duration: 0.3 });
-    // });
-
-    // document.querySelector(".pageTitle").addEventListener("mousemove", function (e) {
-    //   callParallax(e);
-    // });
-
-    // function callParallax(e) {
-    //   parallaxIt(e, ".pageTitle span", 15);
-    // }
-
-    // function parallaxIt(e, target, movement) {
-    //   var page = document.querySelector(".pageTitle");
-    //   var relX = e.pageX - page.offsetLeft;
-    //   var relY = e.pageY - page.offsetTop;
-
-    //   gsap.to(target, {
-    //     x: ((relX - page.clientWidth / 2) / page.clientWidth) * movement,
-    //     y: ((relY - page.clientHeight / 2) / page.clientHeight) * movement,
-    //     duration: 0.3,
-    //     ease: "Power2.easeOut",
-    //   });
-    // }
     const navLinks = document.querySelectorAll(".nav-link");
     const navLinksA = document.querySelectorAll(".nav-link a");
     console.log({ navLinks });

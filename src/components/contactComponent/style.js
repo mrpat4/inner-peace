@@ -79,8 +79,7 @@ const styles = {
           display: flex;
           justify-content: center;
           align-items: center;
-          box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-            rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+          box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
           border-radius: 50%;
           background-color: ${({ theme }) => theme.colors.blackPrimary};
           width: 80px;
@@ -129,7 +128,7 @@ const styles = {
         &:nth-child(3) {
           &:hover {
             .svg-wrapper {
-              background-color: #44c654;
+              background-color: #24a1de;
               svg {
                 fill: #fff;
               }
@@ -139,7 +138,7 @@ const styles = {
         &:nth-child(4) {
           &:hover {
             .svg-wrapper {
-              background-color: #b431b5;
+              background-color: #c71610;
               /* fill: #fff; */
               svg {
                 fill: #fff;

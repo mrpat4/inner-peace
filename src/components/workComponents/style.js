@@ -40,31 +40,54 @@ const styles = {
       .inner-slider-wrapper {
         display: flex !important;
         justify-content: space-between;
-        align-items: center;
-        padding: 0 2rem;
+        align-items: flex-start;
+        padding: 2rem;
+        position: relative;
+        background: ${({ theme }) => theme.colors.backgroundYellow};
+        border-radius: 7px;
+
         @media ${devices.tablet} {
-          padding: 0;
+          padding: 1rem;
+          /* background: transparent; */
         }
         .inner-slider-left-side {
-          width: 100% !important;
+          flex: 0 0 67%;
           word-break: break-all;
-
           .bgAnimation {
-            background: ${({ theme }) => theme.colors.backgroundYellow};
-            /* width: 100% !important; */
-            min-width: 100%;
-            padding: 2rem;
-            min-height: 300px;
-            border-radius: 4px;
-            @media ${devices.mobileL} {
-              padding: 1rem;
-            }
+            width: 100%;
           }
           .title-wrapper {
-            margin-bottom: ${({ theme }) => theme.rems.pxToRem(100)};
+            margin-bottom: ${({ theme }) => theme.rems.pxToRem(50)};
             display: flex;
             align-items: center;
             color: ${({ theme }) => theme.colors.white};
+
+            .inner-title-wrapper {
+              display: flex;
+              align-items: center;
+              @media ${devices.mobileL} {
+                flex-direction: column;
+              }
+            }
+
+            .mobile-image-part {
+              @media ${devices.desktop} {
+                display: none;
+              }
+              @media ${devices.mobileL} {
+                display: flex;
+                width: 100px;
+                height: 100px;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  object-position: top center;
+                }
+              }
+            }
+
             h2 {
               font-size: ${({ theme }) => theme.rems.pxToRem(30)};
               color: ${({ theme }) => theme.colors.white};
@@ -139,9 +162,9 @@ const styles = {
               }
             }
             @media ${devices.mobileL} {
-              margin-bottom: 4.5rem;
-              flex-direction: column;
+              margin-bottom: 1rem;
               align-items: flex-start;
+              justify-content: space-between;
 
               h2 {
                 font-size: ${({ theme }) => theme.rems.pxToRem(17)};
@@ -156,7 +179,6 @@ const styles = {
             font-size: ${({ theme }) => theme.rems.pxToRem(15)};
             color: ${({ theme }) => theme.colors.grayDesc};
             position: relative;
-            max-width: 60%;
             word-break: break-word;
             &:before {
               content: "";
@@ -167,17 +189,17 @@ const styles = {
               top: -10px;
               left: 0;
             }
-            @media ${devices.mobileL} {
-              max-width: 95%;
-            }
+          }
+          @media ${devices.mobileL} {
+            flex: 0 0 100%;
           }
         }
         .inner-slider-right-side {
-          /* width: 100% !important; */
-          position: relative;
-          height: 400px;
-          @media ${devices.tablet} {
-            height: 250px;
+          flex: 0 0 30%;
+
+          @media ${devices.mobileL} {
+            display: none;
+            flex: 0;
           }
 
           &:hover {
@@ -186,31 +208,11 @@ const styles = {
             }
           }
           .work-image-wrapper {
-            width: 400px;
-            height: 400px;
-            position: absolute;
-            right: 60px;
-            overflow: hidden;
-            @media ${devices.tablet} {
-              width: 250px;
-              height: 250px;
-              right: 10px;
-            }
-            @media ${devices.mobileL} {
-              width: 105px;
-              height: 105px;
-              top: -15px;
-            }
-            @media ${devices.mobileS} {
-              width: 90px;
-              height: 90px;
-              top: -18px;
-            }
             img {
               width: 100%;
               height: 100%;
               object-fit: cover;
-              object-position: left top;
+              object-position: top center;
               transition: ${({ theme }) => theme.transition.cubic};
               cursor: pointer;
               border-radius: 4px;
@@ -353,6 +355,9 @@ const styles = {
     bottom: 2rem;
     left: 4rem;
     z-index: 100;
+    @media ${devices.laptop} {
+      left: 1rem;
+    }
     @media ${devices.mobileL} {
       left: 2rem;
     }
@@ -365,7 +370,7 @@ const styles = {
       max-width: 30vw;
       width: 100%;
       overflow: hidden;
-      @media ${devices.tablet} {
+      @media ${devices.laptop} {
         max-width: 50vw;
       }
       @media ${devices.mobileL} {

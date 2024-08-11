@@ -1,41 +1,30 @@
-import albaDashboard from "images/alba-dashboard.png";
-import albaCategory from "images/alba-category.png";
 import albaAddCategory from "images/alba-add-category.png";
+import albaCategory from "images/alba-category.png";
+import albaDashboard from "images/alba-dashboard.png";
 import albaAddUser from "images/alba-users.png";
-import evronexDashboard from "images/evronex-dashboard.png";
-import evronexProfile from "images/evronex-profile.png";
-import evronexTrading from "images/evronex-trading.png";
-import evronexClose from "images/evronex-close-panel.png";
 import arash1 from "images/arash1.png";
 import arash2 from "images/arash2.png";
 import arash3 from "images/arash3.png";
 import arash4 from "images/arash4.png";
-import wingleLogin from "images/wingle-login.png";
-import wingleDashboard from "images/wingle-dashboard.png";
-import wingleUserDashboard from "images/wingle-user-dashboard.png";
-import wingleUserList from "images/wingle-user-list.png";
-import wingleUser from "images/wingle-user.png";
-import wild1 from "images/wild1.png";
-import wild2 from "images/wild2.png";
-import wild3 from "images/wild3.png";
-import wild4 from "images/wild4.png";
-import wild5 from "images/wild5.png";
-import wild6 from "images/widl6.png";
-import latest1 from "images/latest1.png";
-import latest2 from "images/latest2.png";
-import latest3 from "images/latest3.png";
-import latest4 from "images/latest4.png";
-import latest5 from "images/latest5.png";
-import mind01 from "images/mind01.png";
-import mind02 from "images/mind02.png";
-import mind03 from "images/mind03.png";
-import mind04 from "images/mind04.png";
-import mind05 from "images/mind05.png";
 import trader01 from "images/trader01.png";
 import trader02 from "images/trader02.png";
 import trader03 from "images/trader03.png";
 import trader04 from "images/trader04.png";
 import trader05 from "images/trader05.png";
+import wild6 from "images/widl6.png";
+import wild1 from "images/wild1.png";
+import wild2 from "images/wild2.png";
+import wild3 from "images/wild3.png";
+import wild4 from "images/wild4.png";
+import wild5 from "images/wild5.png";
+import wingleDashboard from "images/wingle-dashboard.png";
+import wingleLogin from "images/wingle-login.png";
+import wingleUserDashboard from "images/wingle-user-dashboard.png";
+import wingleUserList from "images/wingle-user-list.png";
+import wingleUser from "images/wingle-user.png";
+import fitgoApp from "images/fitgo.png";
+import kirtoglum from "images/kirtiloglutarim.png";
+import villa from "images/villa.png";
 export const workData = [
   {
     name: "haze website",
@@ -47,12 +36,28 @@ export const workData = [
     main: "https://wild.as/",
   },
   {
-    name: "MindMint",
+    name: "Villa Website",
     description:
-      "MindMint, a platform developed in React.js, offers a unique ‘play-to-earn’ model where users can earn USDT by focusing within the app. It utilizes the Web3 connect method for interfacing with Web3 wallets, enabling the import, withdrawal, and deposit of NFTs seamlessly on the website.While it’s still under development, you’re welcome to check out its progress.",
+      "Developed a villa marketplace website using Next.js and Tailwind CSS. This platform allows users to post advertisements for homes they wish to sell or rent. It also enables potential buyers or renters to browse and find their ideal homes.",
     disabled: false,
-    images: [mind01, mind02, mind03, mind04, mind05],
-    link: "https://mindmint.life/",
+    images: [villa],
+    link: "https://master--luxury-kulfi-236f49.netlify.app",
+  },
+  {
+    name: "FitgoApp",
+    description:
+      "Created a landing page for an AI-powered fitness app using Next.js and Tailwind CSS. This landing page provides an overview of the app’s features and benefits, and allows users to download the app directly from the website.",
+    disabled: false,
+    images: [fitgoApp],
+    link: "https://fitgoapp.com",
+  },
+  {
+    name: "kirtiloglutarim",
+    description:
+      "Developed a multi-language website for Kirtiloglu Tarim, a company specializing in agricultural products such as plants, seeds, and fertilizers. Utilized Next.js for server-side rendering, Styled Components for dynamic styling, and SWR for efficient data fetching to ensure up-to-date information.",
+    disabled: false,
+    images: [kirtoglum],
+    link: "https://kirtiloglutarim.com.tr",
   },
   {
     name: "TraderGpt",
@@ -62,29 +67,14 @@ export const workData = [
     images: [trader01, trader02, trader03, trader04, trader05],
     link: "https://tradergpt.ai/",
   },
-  {
-    name: "latestSpace",
-    description:
-      "LatestSpace, developed using Next.js, is an NFT marketplace featuring an admin dashboard. The admin has the ability to add artwork, mint them as NFTs, and display them on the website.",
-    disabled: false,
-    images: [latest1, latest2, latest3, latest4, latest5],
-    link: "https://latestspace.io/",
-  },
-  {
-    name: "evronex bot",
-    description: "Evronex Bot is a trading robot for which I’ve developed the front-end using HTML, CSS, Bootstrap, and JavaScript. ",
-    disabled: false,
-    images: [evronexDashboard, evronexProfile, evronexClose, evronexTrading],
-    link: "http://178.128.200.244:5001/",
-  },
-  {
-    name: "arash payam",
-    description:
-      "This website was created for a photographer, who happens to be my brother. I developed it about three years ago using HTML, CSS, and JavaScript, with a heavy emphasis on the GSAP animation library.",
-    images: [arash1, arash2, arash3, arash4],
-    disabled: false,
-    link: "https://arash-payam.ir/",
-  },
+  // {
+  //   name: "arash payam",
+  //   description:
+  //     "This website was created for a photographer, who happens to be my brother. I developed it about three years ago using HTML, CSS, and JavaScript, with a heavy emphasis on the GSAP animation library.",
+  //   images: [arash1, arash2, arash3, arash4],
+  //   disabled: false,
+  //   link: "https://arash-payam.ir/",
+  // },
   {
     name: "wingle panel",
     description:
@@ -92,6 +82,7 @@ export const workData = [
     disabled: true,
     images: [wingleLogin, wingleDashboard, wingleUserDashboard, wingleUser, wingleUserList],
     link: "#",
+    showModal: true,
   },
   {
     name: "alba education",
@@ -100,5 +91,6 @@ export const workData = [
     disabled: true,
     images: [albaDashboard, albaCategory, albaAddCategory, albaAddUser],
     link: "#",
+    showModal: true,
   },
 ];

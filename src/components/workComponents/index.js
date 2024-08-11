@@ -23,7 +23,6 @@ function WorkComponent() {
     slidesToScroll: 1,
     // adaptiveHeight: true,
     arrows: false,
-    // afterChange: (current) => console.log({ current }),
     beforeChange: (current, next) => setCurrentSlide(next),
     afterChange: (index) => menuSliderRef.current.slickGoTo(index),
   };
@@ -38,7 +37,6 @@ function WorkComponent() {
     arrows: false,
     centerMode: true,
     centerPadding: "20px",
-    // afterChange: (current) => console.log({ current }),
     beforeChange: (current, next) => setCurrentSlide(next),
     responsive: [
       {
@@ -155,7 +153,6 @@ function WorkComponent() {
     setSelectedImages(undefined);
   };
 
-  console.log({ currentSlide });
   // ----------------------------------------- sliders refs
   const sliderRef = useRef(null);
   const mainSliderRef = useRef(null);
@@ -201,18 +198,23 @@ function WorkComponent() {
                   <div className="inner-slider-left-side" variants={leftSideAnimation} exit="exit">
                     <div className="bgAnimation">
                       <div className="title-wrapper">
-                        <h2>{work.name}</h2>
-                        <Link href={work.link}>
-                          <a
-                            className={`${work.disabled ? "disabled" : ""} sk-btn sk-btn`}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <span className="sk-btn_wrapper">
-                              <span data-text={work.name}>Visit Website</span>
-                            </span>
-                          </a>
-                        </Link>
+                        <div className="inner-title-wrapper">
+                          <h2>{work.name}</h2>
+                          <Link href={work.link}>
+                            <a className={`${work.disabled ? "disabled" : ""} sk-btn sk-btn`} target="_blank" rel="noreferrer">
+                              <span className="sk-btn_wrapper">
+                                <span data-text={work.name}>Visit Website</span>
+                              </span>
+                            </a>
+                          </Link>
+                        </div>
+                        <motion.div className="mobile-image-part" ref={linkRef} variants={rightSideAnimation} exit="exit">
+                          <div className="work-image-wrapper">
+                            {/* {work.images.map((image, i) => ( */}
+                            <img src={work.images[0].src} onClick={() => (work.showModal ? handleShowModal(work) : false)} />
+                            {/* ))} */}
+                          </div>
+                        </motion.div>
                       </div>
                       <p>{work.description}</p>
                       {work.main && (
@@ -224,15 +226,10 @@ function WorkComponent() {
                       )}
                     </div>
                   </div>
-                  <motion.div
-                    className="inner-slider-right-side"
-                    ref={linkRef}
-                    variants={rightSideAnimation}
-                    exit="exit"
-                  >
+                  <motion.div className="inner-slider-right-side" ref={linkRef} variants={rightSideAnimation} exit="exit">
                     <div className="work-image-wrapper">
                       {/* {work.images.map((image, i) => ( */}
-                      <img src={work.images[0].src} onClick={() => handleShowModal(work)} />
+                      <img src={work.images[0].src} onClick={() => (work.showModal ? handleShowModal(work) : false)} />
                       {/* ))} */}
                     </div>
                   </motion.div>
@@ -257,19 +254,8 @@ function WorkComponent() {
           </s.Modal_texts>
           <s.Modal_header onClick={handleCloseModal}>
             <div className="close-btn">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </div>
           </s.Modal_header>
@@ -286,15 +272,12 @@ function WorkComponent() {
           </s.Modal_content>
         </s.Modal_wrapper>
       </s.Modal>
+      {/* -------------------------------------- FOOTER slider */}
       <s.Footer>
         <ul className="ul-footer-work">
           <Slider {...menuSliderSettings} ref={menuSliderRef}>
             {workData.map((work, i) => (
-              <li
-                key={`${work.name + i}work`}
-                className={`${i === currentSlide ? "active" : ""}`}
-                onClick={() => mainSliderRef.current.slickGoTo(i)}
-              >
+              <li key={`${work.name + i}work`} className={`${i === currentSlide ? "active" : ""}`} onClick={() => mainSliderRef.current.slickGoTo(i)}>
                 <span className="left-border"></span>
                 {work.name}
                 <span className="right-border"></span>

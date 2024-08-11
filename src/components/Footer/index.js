@@ -14,7 +14,6 @@ function Footer() {
     },
   ];
   const router = useRouter();
-  console.log({ router });
   return (
     <s.Footer>
       <s.Div_left_side></s.Div_left_side>
