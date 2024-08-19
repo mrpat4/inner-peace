@@ -35,9 +35,10 @@ function About({ clickedNavState, setClickedNavState }) {
             to take on new challenges and deliver efficient solutions.
           </p>
           <h3>Tools i use :</h3>
-          <p>Redux, Saga, TypeScript, axios, react-query, hook-form, socket io, yup and ...</p>
-          <h3>My Favorite Ones Are:</h3>
-          <p>styled components, gsap and framer motion</p>
+          <p>
+            Next.js, React.js,Styled components, Tailwind css,Framer motion,Redux, Saga, TypeScript, axios, react-query, hook-form, socket io, yup and
+            ...
+          </p>
           {/* <h3>Learning :</h3>
           <p>Currently im learning Three.js</p> */}
         </div>
